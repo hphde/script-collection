@@ -6,6 +6,7 @@
 SRC_ORG=${SRC_ORG:-the-source-org}
 DST_ORG=${DST_ORG:-the-destination-org}
 TOKEN=${TOKEN:-1234567890abcdefghijklmnopqrstuvwyxz}
+BASE='https://api.github.com/orgs/'
 
 shopt -s expand_aliases
 alias curl='curl -s -k -H "Authorization: token ${TOKEN}" -H "Accept: application/vnd.github.hellcat-preview+json"'
@@ -23,7 +24,6 @@ loop() {
     FILTER="!="
   fi
 
-  BASE='https://api.github.com/orgs/'
   SRC="$BASE$SRC_ORG/teams"
   DST="$BASE$DST_ORG/teams"
   check "$SRC"
