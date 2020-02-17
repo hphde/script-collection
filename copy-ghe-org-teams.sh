@@ -1,5 +1,6 @@
 #!/bin/bash
-# For some purposes I had the need to completely copy one GHE orgs teams to another. I wrote this shell script to do that job. It takes care of the privacy and the description. It's rather basic but checks if source and destination orgs exist.
+# For some purposes I had the need to completely copy one GHE orgs teams to another. I wrote this shell script to do that job. 
+# It takes care of the privacy and the description. It's rather basic but checks if source and destination orgs exist.
 # If you have more than 100 teams in one org then the script will not work because it doesn't do pagination. Also it doesn't catch any error but it's failsafe to just rerun the script.
 # Requires curl and jq to run properly. Should run under bash and zsh
 
